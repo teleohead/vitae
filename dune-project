@@ -4,23 +4,21 @@
 
 (generate_opam_files true)
 
+(using menhir 2.0)
+
 (source
- (github username/reponame))
+ (github teleohead/vitae))
 
-(authors "Author Name <author@example.com>")
+(authors "Yubing Zhang <joseph.zyb@gmail.com>")
 
-(maintainers "Maintainer Name <maintainer@example.com>")
+(maintainers "Yubing Zhang <joseph.zyb@gmail.com>")
 
-(license LICENSE)
-
-(documentation https://url/to/documentation)
+(license MIT)
 
 (package
  (name vitae)
- (synopsis "A short synopsis")
- (description "A longer description")
- (depends ocaml)
+ (synopsis "A high-performance, type-safe DSL resume compiler in OCaml")
+ (description "A native CLI compiler that transforms custom lightweight markdown-style documents into beautifully typeset PDFs via direct vector generation.")
+ (depends ocaml dune otoml menhir camlpdf)
  (tags
-  ("add topics" "to describe" your project)))
-
-; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html
+  (compiler dsl resume pdf)))

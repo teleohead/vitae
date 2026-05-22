@@ -1,2 +1,3 @@
 (library
- (name vitae))
+ (name vitae)
+ (libraries otoml))
